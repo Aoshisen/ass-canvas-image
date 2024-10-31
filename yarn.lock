@@ -257,6 +257,11 @@
   resolved "https://registry.npmmirror.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
 
+"@types/gradient-parser@^0.1.2":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@types/gradient-parser/-/gradient-parser-0.1.5.tgz#7b25d5f080f41f0d713207894c3f2f490155462a"
+  integrity sha512-r7K3NkJz3A95WkVVmjs0NcchhHstC2C/VIYNX4JC6tieviUNo774FFeOHjThr3Vw/WCeMP9kAT77MKbIRlO/4w==
+
 "@vitejs/plugin-vue@^5.1.4":
   version "5.1.4"
   resolved "https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-5.1.4.tgz#72b8b705cfce36b00b59af196195146e356500c4"
@@ -524,6 +529,13 @@ picocolors@^1.1.0:
   version "1.1.1"
   resolved "https://registry.npmmirror.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
+
+pixi-filters@^6.0.5:
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/pixi-filters/-/pixi-filters-6.0.5.tgz#89d23091dc4e6341b8aa2112ebfcb5240bfb3223"
+  integrity sha512-M7F+Xu4Ysp2iy7bNZxt6U4hxO+X8c3msVKOQAq/tf3sLt99XOiY54iH2Ixj5VRIesmjdLWA5CaUQ+TUfyBVe2g==
+  dependencies:
+    "@types/gradient-parser" "^0.1.2"
 
 pixi.js@^8.5.2:
   version "8.5.2"

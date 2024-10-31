@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Canvas from "./components/Canvas.vue"
+// import Hamburg from "./components/Hamburg/index.vue"
+import Woman from "./components/Test/index.vue"
 </script>
 <template>
-  <Canvas />
+  <!-- <Hamburg /> -->
+  <Woman />
 </template>
