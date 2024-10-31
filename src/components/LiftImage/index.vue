@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import img from "./woman.jpg";
 import { ref, reactive, onMounted } from "vue"
 import { randomUniform, color as d3Color, RGBColor } from "d3";
 import { useEventListener, useThrottleFn } from "@vueuse/core";
+const props = defineProps<{
+	src: string;
+}>()
 
 interface Point {
 	x: number;
@@ -21,12 +23,12 @@ let points = reactive<Point[]>([])
 function handleImageLoaded(this: HTMLImageElement) {
 	const data = getImageData(this)
 	points = getRenderPoint(data, GAP);
-	drawPoints.bind(canvasElement.value)(points as Point[])
+	drawPoints.bind(canvasElement.value)(points)
 }
 
 function animation(step: number) {
-	const currentPoints = points.map((point) => getNextPoint(point as Point, step))
-	drawPoints.bind(canvasElement.value)(currentPoints as Point[])
+	const currentPoints = points.map((point) => getNextPoint(point, step))
+	drawPoints.bind(canvasElement.value)(currentPoints)
 }
 
 function getImageData(image: HTMLImageElement) {
@@ -62,7 +64,7 @@ function getRenderPoint(data: ImageData, gap: number): Point[] {
 }
 
 function drawPoint(this: CanvasRenderingContext2D, point: Point) {
-	this.fillStyle = point.color as any;
+	this.fillStyle = point.color.toString();
 	this.beginPath();
 	this.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
 	this.fill();
@@ -87,7 +89,7 @@ function drawPoints(this: HTMLCanvasElement, points: Point[]) {
 
 function handleMounted() {
 	const image = new Image()
-	image.src = img;
+	image.src = props.src;
 	image.onload = handleImageLoaded.bind(image);
 }
 

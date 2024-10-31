@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import Woman from "./components/Test/index.vue"
+import LiftImage from "./components/LiftImage/index.vue"
+import img from "./assets/woman.jpg"
 </script>
 <template>
-  <Woman />
+  <LiftImage :src="img"/>
 </template>
